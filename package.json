@@ -4,8 +4,9 @@
   "scripts": {
     "reset": "npx rimraf node_modules ./**/node_modules",
     "dev": "modern dev",
-    "build": "modern build",
+    "build": "npx modern build",
     "start": "modern start",
+    "vercel-build": "pnpm install && npx modern build",
     "serve": "modern serve",
     "new": "modern new",
     "lint": "biome check",
@@ -14,10 +15,6 @@
   },
   "engines": {
     "node": ">=16.18.1"
-  },
-  "lint-staged": {},
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
   },
   "dependencies": {
     "@modern-js/runtime": "2.63.7",
